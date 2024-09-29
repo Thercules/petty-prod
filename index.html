@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PettyRural</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Importação do CSS do Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Importação do JavaScript do Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+    <link rel="icon" href="assets/logo-pr.ico">
+
+    <!--Configurações da miniatura-->
+    <meta property="og:title" content="Pettyrural - Seu Petshop Completo">
+    <meta property="og:description" content="Encontre os melhores produtos e serviços para o seu animal de estimação no Pettyrural. Temos uma variedade de alimentos, acessórios e cuidados para animais de todos os tamanhos. Visite-nos hoje mesmo!">
+    <meta property=og:image content=https://i.ibb.co/tC9VGfq/meta.png>
+    <meta property=og:image:width content=923>
+    <meta property=og:image:height content=923>
+    <meta property=og:url content=https://petty-rural.vercel.app/>
+  </head>
+  <body>
+    <nav id="navigation">
+      <div class="wrapper">
+        <a href="#">
+        <img src="assets/logo-pr-semfundo.png" class="logo" alt=""> </a>
+
+        <div class="menu">
+          <ul>
+            <li><a onclick="closeMenu()" href="#home">Início</a></li>
+            <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
+            <li><a onclick="closeMenu()" href="#produtos">Produtos</a></li>
+            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
+            <li><a onclick="closeMenu()" href="#contact">Contato</a></li>
+            
+          </ul>
+
+          <a class="button" onclick="closeMenu()" href="https://api.whatsapp.com/send?phone=5571996070415&text=Ol%C3%A1,%20tudo%20bem?%20Estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20para%20agendar%20uma%20visita.">
+            Agende sua visita</a
+          >
+
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://www.instagram.com/pettyrural/"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a target="_blank" href="https://www.facebook.com/pettyrural">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          onclick="openMenu()"
+          class="open-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 20H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 12H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18 28L30 28"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        
+        <button
+          aria-expanded="true"
+          aria-label="Fechar menu"
+          onclick="closeMenu()"
+          class="close-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 10L10 30M10 10L30 30"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>BOAS-VINDAS AO PETTYRURAL👋</h4>
+            <h1>Atenção completa para seu fiel amigo 🐾</h1>
+          </header>
+
+          <div class="content">
+            <p>
+              A PettyRural contém uma equipe técnica e qualificada para atender as
+              necessidades do seu pet com todo amor e carinho qe ele merece.
+            </p>
+    
+          <div class="button-container">
+            <a class="buttonHome" href="#">
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                d="M13.8337 11.6667C13.667 11.5833 12.5837 11.0833 12.417 11C12.2503 10.9167 12.0837 10.9167 11.917 11.0833C11.7503 11.25 11.417 11.75 11.2503 11.9167C11.167 12.0833 11.0003 12.0833 10.8337 12C10.2503 11.75 9.66699 11.4167 9.16699 11C8.75033 10.5833 8.33366 10.0833 8.00033 9.58334C7.91699 9.41668 8.00033 9.25001 8.08366 9.16668C8.16699 9.08334 8.25033 8.91668 8.41699 8.83334C8.50033 8.75001 8.58366 8.58334 8.58366 8.50001C8.66699 8.41668 8.66699 8.25001 8.58366 8.16668C8.50033 8.08334 8.08366 7.08334 7.91699 6.66668C7.83366 6.08334 7.66699 6.08334 7.50033 6.08334C7.41699 6.08334 7.25033 6.08334 7.08366 6.08334C6.91699 6.08334 6.66699 6.25001 6.58366 6.33334C6.08366 6.83334 5.83366 7.41668 5.83366 8.08334C5.91699 8.83334 6.16699 9.58334 6.66699 10.25C7.58366 11.5833 8.75033 12.6667 10.167 13.3333C10.5837 13.5 10.917 13.6667 11.3337 13.75C11.7503 13.9167 12.167 13.9167 12.667 13.8333C13.2503 13.75 13.7503 13.3333 14.0837 12.8333C14.2503 12.5 14.2503 12.1667 14.167 11.8333C14.167 11.8333 14.0003 11.75 13.8337 11.6667ZM15.917 4.08334C12.667 0.833344 7.41699 0.833344 4.16699 4.08334C1.50033 6.75001 1.00033 10.8333 2.83366 14.0833L1.66699 18.3333L6.08366 17.1667C7.33366 17.8333 8.66699 18.1667 10.0003 18.1667C14.5837 18.1667 18.2503 14.5 18.2503 9.91668C18.3337 7.75001 17.417 5.66668 15.917 4.08334ZM13.667 15.75C12.5837 16.4167 11.3337 16.8333 10.0003 16.8333C8.75033 16.8333 7.58366 16.5 6.50033 15.9167L6.25033 15.75L3.66699 16.4167L4.33366 13.9167L4.16699 13.6667C2.16699 10.3333 3.16699 6.16668 6.41699 4.08334C9.66699 2.00001 13.8337 3.08334 15.8337 6.25001C17.8337 9.50001 16.917 13.75 13.667 15.75Z"
+                fill="white"
+              />
+                </svg>
+                Fale Conosco!
+            </a>
+        
+            <a class="buttonHome2" target="_blank" href="https://www.instagram.com/pettyrural/">
+              <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                stroke="#FFFAF1"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                stroke="#FFFAF1"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17.5 6.49997H17.51"
+                stroke="#FFFAF1"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+                
+            </a>
+        </div>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img src="./assets/imagem-home-dog-iphone.png" alt="pet" />
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>+15</h3>
+            <p>Anos no mercado</p>
+          </div>
+
+          <div class="stat">
+            <h3>+5</h3>
+            <p>Especialistas disponíveis</p>
+          </div>
+
+          <div class="stat">
+            <h3>MILHARES</h3>
+            <p>de pets atendidos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>Sobre nós</h4>
+            <h2>Entenda quem somos e por que existimos</h2>
+          </header>
+
+          <div class="content">
+            <p>
+              No Petty Rural, acreditamos que cada animal merece ser tratado com amor, respeito e atenção individualizada. Nossa equipe dedicada é composta por amantes de animais que se esforçam para tornar a experiência do seu pet a mais agradável possível. Desde o momento em que você entra em nosso estabelecimento, até o momento em que sai com seu amigo peludo feliz e saudável, estamos aqui para garantir que você e seu animal de estimação se sintam em casa.
+              Nosso compromisso com uma política amigável se estende a cada aspecto do nosso negócio. Queremos que você se sinta bem-vindo em cada visita e que saiba que pode confiar em nós para cuidar do seu animal de estimação como se fosse nosso próprio. Estamos sempre prontos para ouvir suas necessidades específicas e adaptar nossos serviços para atender às necessidades individuais do seu pet.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <div class="owl-carousel owl-theme">
+            <div class="item"><img src="assets/p1.PNG" alt="dog" /></div>
+            <div class="item"><img src="assets/p2.PNG" alt="dog" /></div>
+            <div class="item"><img src="assets/p3.PNG" alt="dog" /></div>
+            <!-- Adicione quantas imagens desejar com as classes "item" -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="clientes">
+      <div class="wrapper">
+          <header>
+              <h4>Nossos Fiéis Clientes</h4>
+          </header>
+  
+          <div class="content">
+              <div class="c-cards">
+                  <div class="c-card">
+                      <center>
+                          <a href="https://www.instagram.com/pettyrural/" target="_blank">
+                              <img src="assets/clients/c1.png" alt="">
+                          </a>
+                          <h3>Meg</h3>
+                      </center>
+                  </div>
+  
+                  <div class="c-card">
+                      <center>
+                          <a href="https://www.instagram.com/pettyrural/" target="_blank">
+                              <img src="assets/clients/c2.png" alt="">
+                          </a>
+                          <h3>Nikolau</h3>
+                      </center>
+                  </div>
+  
+                  <div class="c-card">
+                      <center>
+                          <a href="https://www.instagram.com/pettyrural/" target="_blank">
+                              <img src="assets/clients/c3.png" alt="">
+                          </a>
+                          <h3>Nina</h3>
+                      </center>
+                  </div>
+  
+                  <div class="c-card">
+                      <center>
+                          <a href="https://www.instagram.com/pettyrural/" target="_blank">
+                              <img src="assets/clients/c4.png" alt="">
+                          </a>
+                          <h3>Elvis</h3>
+                      </center>
+                  </div>
+              </div>
+          </div>
+          <center>
+            <a class="buttonHome2" target="_blank" href="about.html">          
+              <i class="fa-solid fa-dog"></i>
+              Conheça mais sobre as raças
+            </a>
+          </center>
+      </div>
+    </section> -->
+
+    <section id="services">
+      <div class="wrapper">
+        <header>
+          <h4>Serviços</h4>
+          <h2>Hora de cuidar do seu pet e do seu lar!</h2>
+        </header>
+
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Banho e Tosa</h3>
+              <p>
+                Deixe seu amigo peludo brilhar! No Petty Rural, oferecemos uma variedade de serviços de banho e tosa, incluindo cortes elegantes, tosas específicas para raças e banhos terapêuticos para peles sensíveis.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Farmácia e Higiene</h3>
+              <p>
+                Saúde em primeiro lugar! Na nossa farmácia, você encontrará medicamentos, suplementos e produtos de higiene para manter seu pet feliz e saudável. Conte com nossa equipe para recomendações personalizadas.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Produtos para Piscinas</h3>
+              <p>
+                Refresque-se com segurança! Descubra nossa linha de produtos para piscinas, garantindo um ambiente limpo e seguro para seu pet se divertir. Na Petty Rural, cuidamos do bem-estar do seu companheiro, dentro e fora d'água
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="produtos">
+      <div class="wrapper">
+        <header>
+          <h4>Artigos</h4>
+          <!-- <h2>Mostramos ainda mais formas de cuidados para o seu companheiro.</h2> -->
+        </header>
+    
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <center>
+                <a href="https://www.instagram.com/p/CiIKrTELmTW/">
+                  <img src="assets/post1.PNG" alt="">  
+                  <div class="hover-overlay">
+                    <h3 style="color: #fff;">Cuide Bem do Seu Bichinho</h3>
+                    <p style="color: #fff;">Dicas essenciais para manter seu pet saudável e feliz. Descubra mais sobre cuidados, alimentação e atividades no nosso Instagram. Acesse e cuide bem do seu amigo!</p>
+                  </div>
+                </a>
+              </center>
+            </div>
+    
+            <div class="card">
+              <center>
+                <a href="https://www.instagram.com/p/CiFYJ5HvJfr/">
+                  <img src="assets/post22.png" alt="">
+                  <div class="hover-overlay">
+                    <h3 style="color: #fff;">Prevenção de Dofilaríase</h3>
+                    <p style="color: #fff;">Entenda o que é a dofilariose e como preveni-la. Informações valiosas para proteger seu pet contra essa doença. Confira detalhes e cuidados no nosso Instagram!</p>
+                  </div>
+                </a>
+              </center>
+            </div>
+    
+            <div class="card">
+              <center>
+                <a href="https://www.instagram.com/p/CgnSSiFMpLw/">
+                  <img src="assets/post33.png" alt="">
+                  <div class="hover-overlay">
+                    <h3 style="color: #fff;">Doenças no Inverno</h3>
+                    <p style="color: #fff;">Conheça as doenças mais comuns que afetam os pets durante o inverno. Dicas de como prevenir e cuidar do seu animalzinho. Veja mais informações no nosso Instagram!</p>
+                  </div>
+                </a>
+              </center>
+            </div>
+          </div> <br><br>
+          <div class="button-row">
+            <a class="buttonHome2" target="_blank" href="https://www.instagram.com/pettyrural/">          
+              <i class="fa-brands fa-instagram"></i>
+              Saiba Mais
+            </a>
+            <a class="buttonHome2" target="_blank" href="about.html">          
+              <i class="fa-solid fa-dog"></i>
+              Guia de Raças
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="produtos">
+      <div class="wrapper">
+        <header>
+          <h4>Produtos</h4>
+          <h2>Produtos que Fazem seu Pet se Sentir Especial</h2>
+        </header>
+
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <center>
+                <img src="assets/products/p1.PNG" alt="">
+                <h3>Rações</h3> 
+                <a class="button" href="https://api.whatsapp.com/send?phone=5571996070415&text=Ol%C3%A1!%20Estou%20interessado%20em%20saber%20mais%20sobre%20as%20op%C3%A7%C3%B5es%20de%20ra%C3%A7%C3%B5es%20dispon%C3%ADveis%20para%20meu%20pet.%20Poderia%20me%20informar%20os%20tipos%20e%20marcas%20dispon%C3%ADveis?">
+                  Saiba mais 
+                </a>
+              </center>
+            </div>
+
+            <div class="card">
+              <center>
+                <img src="assets/products/p22.png" alt="">
+                <h3>Acessórios</h3> 
+                <a class="button" href="https://api.whatsapp.com/send?phone=5571996070415&text=Ol%C3%A1!%20Estou%20procurando%20por%20acess%C3%B3rios%20para%20o%20meu%20pet.%20Voc%C3%AAs%20t%C3%AAm%20uma%20variedade%20de%20produtos,%20como%20coleiras,%20guias,%20brinquedos%20e%20outros%20acess%C3%B3rios?">
+                  Saiba mais 
+                </a>
+              </center>
+            </div>
+
+            <div class="card">
+              <center>
+                <img src="assets/products/p3.PNG" alt="">
+                <h3>Higiene</h3> 
+                <a class="button" href="https://api.whatsapp.com/send?phone=5571996070415&text=Ol%C3%A1!%20Gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos%20de%20higiene%20dispon%C3%ADveis%20para%20o%20meu%20pet.%20Voc%C3%AAs%20t%C3%AAm%20shampoos,%20condicionadores,%20escovas%20e%20outros%20itens%20de%20cuidados%20pessoais?">
+                  Saiba mais 
+                </a>
+              </center>
+            </div>
+
+            <div class="card">
+              <center>
+                <img src="assets/products/p44.png" alt="">
+                <h3>Medicamentos</h3> 
+                <a class="button" href="https://api.whatsapp.com/send?phone=5571996070415&text=Ol%C3%A1!%20Preciso%20de%20alguns%20medicamentos%20para%20o%20meu%20pet.%20Voc%C3%AAs%20oferecem%20uma%20variedade%20de%20rem%C3%A9dios,%20como%20antipulgas,%20verm%C3%ADfugos%20e%20outros%20produtos%20de%20sa%C3%BAde?">
+                  Saiba mais 
+                </a>
+              </center>
+            </div>
+
+            <div class="card">
+              <center>
+                <img src="assets/products/p5.PNG" alt="">
+                <h3>Petiscos</h3> 
+                <a class="button" href="https://api.whatsapp.com/send?phone=5571996070415&text=Ol%C3%A1!%20Estou%20interessado%20em%20comprar%20alguns%20petiscos%20para%20o%20meu%20pet.%20Voc%C3%AAs%20t%C3%AAm%20uma%20variedade%20de%20op%C3%A7%C3%B5es,%20incluindo%20petiscos%20naturais,%20snacks%20saud%C3%A1veis%20e%20guloseimas%20saborosas?">
+                  Saiba mais 
+                </a>
+              </center>
+            </div>
+            
+            <div class="card">
+              <center>
+                <img src="assets/products/p6.PNG" alt="">
+                <h3>Viagens</h3> 
+                <a class="button" href="https://api.whatsapp.com/send?phone=5571996070415&text=Ol%C3%A1!%20Estou%20planejando%20uma%20viagem%20com%20meu%20pet%20e%20gostaria%20de%20saber%20quais%20s%C3%A3o%20os%20produtos%20essenciais%20para%20tornar%20a%20viagem%20segura%20e%20confort%C3%A1vel%20para%20ele.%20Voc%C3%AAs%20t%C3%AAm%20itens%20como%20bolsas%20de%20transporte,%20comedouros%20port%C3%A1teis%20e%20outros%20acess%C3%B3rios%20para%20viagens?">
+                  Saiba mais 
+                </a>
+              </center>
+            </div>
+
+            <div class="card">
+              <center>
+                <img src="assets/products/p7.PNG" alt="">
+                <h3>Camas e Casinhas</h3> 
+                <a class="button" href="https://api.whatsapp.com/send?phone=5571996070415&text=Ol%C3%A1!%20Estou%20procurando%20por%20uma%20cama%20ou%20casinha%20confort%C3%A1vel%20para%20o%20meu%20pet.%20Voc%C3%AAs%20t%C3%AAm%20uma%20variedade%20de%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%20em%20diferentes%20tamanhos%20e%20estilos?">
+                  Saiba mais 
+                </a>
+              </center>
+            </div>
+
+            <div class="card">
+              <center>
+                <img src="assets/products/p8.PNG" alt="">
+                <h3>Brinquedos</h3> 
+                <a class="button" href="https://api.whatsapp.com/send?phone=5571996070415&text=Ol%C3%A1!%20Estou%20interessado%20em%20adquirir%20alguns%20brinquedos%20para%20o%20meu%20pet.%20Voc%C3%AAs%20t%C3%AAm%20uma%20variedade%20de%20op%C3%A7%C3%B5es%20de%20brinquedos,%20como%20bolas,%20cordas,%20pel%C3%BAcias%20e%20jogos%20interativos?">
+                  Saiba mais 
+                </a>
+              </center>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const prevButton = document.querySelector('.buttonProducts-prev');
+        const nextButton = document.querySelector('.buttonProducts-next');
+        const carousel = document.querySelector('.custom-carousel');
+    
+        let scrollAmount = 0;
+    
+        prevButton.addEventListener('click', function() {
+          scrollAmount -= carousel.clientWidth;
+          carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+        });
+    
+        nextButton.addEventListener('click', function() {
+          scrollAmount += carousel.clientWidth;
+          carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+        });
+      });
+    </script>
+
+    <section id="produtos">
+      <div class="custom-wrapper">
+        <header>
+          <h4>Produtos</h4>
+          <h2>Produtos que Fazem seu Pet se Sentir Especial</h2>
+        </header>
+    
+        <div class="custom-content">
+          <div class="custom-carousel">
+            <div class="custom-item">
+              <center>
+                <img src="assets/racoes-petty.png" alt="" class="custom-img">
+                <!-- <h3>Rações</h3> -->
+              </center>
+            </div>
+    
+            <div class="custom-item">
+              <center>
+                <img src="assets/higiene-petty.png" alt="" class="custom-img">
+                
+              </center>
+            </div>
+    
+            <div class="custom-item">
+              <center>
+                <img src="assets/medicamentos-petty.png" alt="" class="custom-img">
+                
+              </center>
+            </div>
+    
+            <div class="custom-item">
+              <center>
+                <img src="assets/snacks-petty.png" alt="" class="custom-img">
+                
+              </center>
+            </div>
+
+            <div class="custom-item">
+              <center>
+                <img src="assets/acesso-petty.png" alt="" class="custom-img">
+              </center>
+            </div>
+          </div> <!-- .custom-carousel -->
+          <div class="custom-controls">
+            <div class="button-row">
+              <button class="buttonProducts-prev">Anterior</button>
+              <button class="buttonProducts-next">Próximo</button>
+            </div>
+          </div>
+          <center>
+          <a class="buyButton" target="_blank" href="https://api.whatsapp.com/send?phone=5571996070415&text=Ol%C3%A1?!%20gostaria%20de%20falar%20com%20um%20atendente%20da%20PettyRural,%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site.">          
+            <i class="fa-solid fa-dog"></i>
+            Comprar Agora
+          </a>
+          </center>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h2>Entre em contato com a gente!</h2>
+          </header>
+
+          <div class="content">
+            <ul>
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Rua Desembargador Polybio Mendes da Silva, 159 <br>
+                Jaguaribe, Salvador - BA, 41613-078
+              </li>
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M22 6L12 13L2 6"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                pettyonline@pettyrural.com.br
+              </li>
+            </ul>
+
+            <a
+              class="button"
+              href="https://api.whatsapp.com/send?phone=5571996070415&text=Ol%C3%A1,%20tudo%20bem?%20Estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20para%20agendar%20uma%20visita."
+              target="_blank"
+            >
+            <i class="fa-solid fa-calendar-days"></i>
+
+              Agende sua visita
+            </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2353334867926!2d-38.39523402492376!3d-12.956787587357214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71619f08830fdd5%3A0xb8e0e5d60c7a3366!2sPetty%20Rural!5e0!3m2!1spt-BR!2sbr!4v1707939116327!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  
+    <footer>
+      <div class="wrapper">
+        <div class="col-a">
+          <a class="logo" href="#home"> </a>
+
+          <img src="assets/logo-pr-semfundo.png" width="30%" alt="">
+
+          <p>
+            ©2024 PettyRural. <br />
+            Todos os direitos reservados.
+          </p>
+        </div>
+
+        <div class="col-b">
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://www.instagram.com/pettyrural/"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.facebook.com/pettyrural/">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <a id="backToTopButton" href="#home">
+      <svg
+        width="50"
+        height="50"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+      <circle cx="20" cy="20" r="20" fill="#00856F" />
+      <g transform="translate(2, 2) scale(1.8)">
+      <path
+      
+                d="M13.8337 11.6667C13.667 11.5833 12.5837 11.0833 12.417 11C12.2503 10.9167 12.0837 10.9167 11.917 11.0833C11.7503 11.25 11.417 11.75 11.2503 11.9167C11.167 12.0833 11.0003 12.0833 10.8337 12C10.2503 11.75 9.66699 11.4167 9.16699 11C8.75033 10.5833 8.33366 10.0833 8.00033 9.58334C7.91699 9.41668 8.00033 9.25001 8.08366 9.16668C8.16699 9.08334 8.25033 8.91668 8.41699 8.83334C8.50033 8.75001 8.58366 8.58334 8.58366 8.50001C8.66699 8.41668 8.66699 8.25001 8.58366 8.16668C8.50033 8.08334 8.08366 7.08334 7.91699 6.66668C7.83366 6.08334 7.66699 6.08334 7.50033 6.08334C7.41699 6.08334 7.25033 6.08334 7.08366 6.08334C6.91699 6.08334 6.66699 6.25001 6.58366 6.33334C6.08366 6.83334 5.83366 7.41668 5.83366 8.08334C5.91699 8.83334 6.16699 9.58334 6.66699 10.25C7.58366 11.5833 8.75033 12.6667 10.167 13.3333C10.5837 13.5 10.917 13.6667 11.3337 13.75C11.7503 13.9167 12.167 13.9167 12.667 13.8333C13.2503 13.75 13.7503 13.3333 14.0837 12.8333C14.2503 12.5 14.2503 12.1667 14.167 11.8333C14.167 11.8333 14.0003 11.75 13.8337 11.6667ZM15.917 4.08334C12.667 0.833344 7.41699 0.833344 4.16699 4.08334C1.50033 6.75001 1.00033 10.8333 2.83366 14.0833L1.66699 18.3333L6.08366 17.1667C7.33366 17.8333 8.66699 18.1667 10.0003 18.1667C14.5837 18.1667 18.2503 14.5 18.2503 9.91668C18.3337 7.75001 17.417 5.66668 15.917 4.08334ZM13.667 15.75C12.5837 16.4167 11.3337 16.8333 10.0003 16.8333C8.75033 16.8333 7.58366 16.5 6.50033 15.9167L6.25033 15.75L3.66699 16.4167L4.33366 13.9167L4.16699 13.6667C2.16699 10.3333 3.16699 6.16668 6.41699 4.08334C9.66699 2.00001 13.8337 3.08334 15.8337 6.25001C17.8337 9.50001 16.917 13.75 13.667 15.75Z"
+                fill="white"
+              /> </g>
+      </svg>
+
+    </a>
+
+    <!-- ScrollReaveal Lib -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
